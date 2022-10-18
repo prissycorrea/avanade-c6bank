@@ -1,19 +1,23 @@
-import React from 'react';
-import styled from '@emotion/styled';
+import React, { useState } from 'react';
+import { Container, 
+    CssBaseline
+} from '@mui/material';
+import {createTheme, ThemeProvider} from "@mui/material/styles";
+import Copyright from '../components/utils/Copyright';
+import Register from '../components/Form/Register';
 
-const Container = styled.div`
-    background-image: url('/barco.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-`
+const theme = createTheme();
 
 export default function RegisterPage() {
+    const [open, setOpen] = useState<boolean>(false);
+    
     return (
-        <Container>
-            register
-        </Container>
+        <ThemeProvider theme={theme}>
+            <Container component="main" maxWidth="xs"> {/*ele vai ser o main*/}
+                <CssBaseline />
+                <Register />
+                <Copyright site="avanade" />
+            </Container>
+        </ThemeProvider>
     )
 }
