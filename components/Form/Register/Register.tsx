@@ -41,7 +41,7 @@ export default function Register() {
     },[password]);
 
     useEffect(() => {
-        if(password && confirmPassword) {
+        if(password && confirmPassword && password.length >= 6) {
             if(password !== confirmPassword) {
                 setError(true);
                 setErrorMessage('As senhas não conferem');
