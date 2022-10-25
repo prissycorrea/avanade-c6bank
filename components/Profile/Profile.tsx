@@ -26,8 +26,9 @@ const Account = styled.div`
     div:first-child {
         width: 80%;
         padding-left: 20px;
-        & div {
-            width: 100%;
+        & > div {
+          width: 100%;
+          cursor: pointer;
         }
     }
 `

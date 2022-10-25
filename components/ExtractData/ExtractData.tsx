@@ -11,7 +11,9 @@ const ExtractDataContainer = styled.table`
   display: block;
   line-height: 1;
   }
-  thead tr {text-align: left;} 
+  thead tr {
+    text-align: left;
+  } 
   tr  {
     line-height: 2em;
   }
